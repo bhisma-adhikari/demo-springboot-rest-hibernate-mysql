@@ -31,11 +31,11 @@ public class LoginCredentialService {
 
 
     /**
-     * Returns loginCredential if found, else returns null.
+     * Returns loginCredentialEntity if found, else returns null.
      */
-    public LoginCredentialEntity findLoginCredentialByUsername(String username) {
-        if (username == null) return null;
-        return loginCredentialRepository.findByUsername(username);
+    public LoginCredentialEntity findLoginCredentialEntity(Long loginCredentialId) {
+        if (loginCredentialId == null) return null;
+        return loginCredentialRepository.findById(loginCredentialId).orElse(null);
     }
 
 }

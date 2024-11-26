@@ -111,11 +111,11 @@ public class NoteValidator extends BaseValidator {
         // validate userId 
         Long userId = noteDto.getUserId();
         if (userId == null) {
-            errors.add(AppError.fromAppErrorCode(AppErrorCode.PUT_NOTES__USERID_MISSING));
+            errors.add(AppError.fromAppErrorCode(AppErrorCode.PUT_NOTES__USER_ID_MISSING));
         } else {
             UserEntity userEntity = userService.findUser(userId);
             if (userEntity == null) {
-                errors.add(AppError.fromAppErrorCode(AppErrorCode.PUT_NOTES__USERID_NONEXISTING, userId));
+                errors.add(AppError.fromAppErrorCode(AppErrorCode.PUT_NOTES__USER_ID_NONEXISTING, userId));
             }
         }
 

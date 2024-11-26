@@ -46,7 +46,7 @@ public class LoginCredentialDtoTransformer {
     public LoginCredentialEntity transformToEntity(LoginCredentialDto loginCredentialDto) {
         UserEntity userEntity = userService.findUser(loginCredentialDto.getUserId());
 
-        LoginCredentialEntity loginCredentialEntityDb = loginCredentialService.findLoginCredentialByUsername(loginCredentialDto.getUsername());
+        LoginCredentialEntity loginCredentialEntityDb = loginCredentialService.findLoginCredentialEntity(loginCredentialDto.getId());
         if (loginCredentialEntityDb != null) {
             loginCredentialEntityDb.setPassword(loginCredentialDto.getPassword());
             return loginCredentialEntityDb;
