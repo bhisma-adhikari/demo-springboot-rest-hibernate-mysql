@@ -43,7 +43,7 @@ public class UserValidator extends BaseValidator {
     public void validateUserIdForGetNotes(Long userId) throws AppException {
         List<AppError> errors = new ArrayList<>();
         if (userService.findUser(userId) == null) {
-            errors.add(AppError.fromAppErrorCode(AppErrorCode.GET_USER_NOTES__USERID_NONEXISTING, userId));
+            errors.add(AppError.fromAppErrorCode(AppErrorCode.GET_USER_NOTES__USER_ID_NONEXISTING, userId));
         }
         throwExceptionIfNeeded(errors);
     }
@@ -105,7 +105,7 @@ public class UserValidator extends BaseValidator {
             // validate loginCredential.userId
             Long userId = loginCredentialDto.getUserId();
             if (userId != null) {
-                errors.add(AppError.fromAppErrorCode(AppErrorCode.POST_USERS__LOGIN_CREDENTIAL_USERID_PRESENT));
+                errors.add(AppError.fromAppErrorCode(AppErrorCode.POST_USERS__LOGIN_CREDENTIAL_USER_ID_PRESENT));
             }
         }
 
@@ -196,7 +196,7 @@ public class UserValidator extends BaseValidator {
         // validate noteIds
         Set<Long> noteIds = userDto.getNoteIds();
         if (noteIds != null) {
-            errors.add(AppError.fromAppErrorCode(AppErrorCode.PUT_USERS__NOTEIDS_PRESENT));
+            errors.add(AppError.fromAppErrorCode(AppErrorCode.PUT_USERS__NOTE_IDS_PRESENT));
         }
 
         throwExceptionIfNeeded(errors);

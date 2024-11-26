@@ -11,7 +11,7 @@ public enum AppErrorCode {
 
     // endpoint-specific errors 
     GET_USERS__NOT_FOUND("1.404.1", "User not found for given id"),
-    GET_USER_NOTES__USERID_NONEXISTING("1.404.2", "VALIDATION ERROR: userId non-existing; user with id {} does not exist"),
+    GET_USER_NOTES__USER_ID_NONEXISTING("1.404.2", "VALIDATION ERROR: userId non-existing; user with id {} does not exist"),
 
     POST_USERS__ID_PRESENT("2.400.1", "VALIDATION ERROR: id not expected"),
     POST_USERS__FIRSTNAME_MISSING("2.400.2", "VALIDATION ERROR: firstName missing"),
@@ -25,7 +25,7 @@ public enum AppErrorCode {
     POST_USERS__LOGIN_CREDENTIAL_USERNAME_EXISTING("2.400.10", "VALIDATION ERROR: loginCredential.username existing; This username is not available"),
     POST_USERS__LOGIN_CREDENTIAL_PASSWORD_MISSING("2.400.11", "VALIDATION ERROR: loginCredential.password missing"),
     POST_USERS__LOGIN_CREDENTIAL_PASSWORD_INVALID("2.400.12", "VALIDATION ERROR: loginCredential.password invalid"),
-    POST_USERS__LOGIN_CREDENTIAL_USERID_PRESENT("2.400.13", "VALIDATION ERROR: loginCredential.userId not expected"),
+    POST_USERS__LOGIN_CREDENTIAL_USER_ID_PRESENT("2.400.13", "VALIDATION ERROR: loginCredential.userId not expected"),
     POST_USERS__NOTE_IDS_PRESENT("2.400.14", "VALIDATION ERROR: noteIds not expected; This API creates a new user (without any notes)"),
 
 
@@ -45,7 +45,7 @@ public enum AppErrorCode {
     PUT_USERS__LOGIN_CREDENTIAL_PASSWORD_MISSING("3.400.14", "VALIDATION ERROR: loginCredential.password missing"),
     PUT_USERS__LOGIN_CREDENTIAL_PASSWORD_INVALID("3.400.15", "VALIDATION ERROR: loginCredential.password invalid"),
     PUT_USERS__LOGIN_CREDENTIAL_USER_ID_MISMATCHING("3.400.16", "VALIDATION ERROR: loginCredential.userId invalid; This field is optional; However, if present, it must match with corresponding user id"),
-    PUT_USERS__NOTEIDS_PRESENT("3.400.17", "VALIDATION ERROR: noteIds not expected; This API cannot modify the user's notes"),
+    PUT_USERS__NOTE_IDS_PRESENT("3.400.17", "VALIDATION ERROR: noteIds not expected; This API cannot modify the user's notes"),
 
     GET_NOTES__NOT_FOUND("4.404.1", "Note not found for given id"),
 
@@ -54,8 +54,8 @@ public enum AppErrorCode {
     POST_NOTES__TEXT_INVALID("5.400.3", "VALIDATION ERROR: text invalid"),
     POST_NOTES__GENRES_MISSING("5.400.4", "VALIDATION ERROR: genres missing"),
     POST_NOTES__GENRES_EMPTY("5.400.5", "VALIDATION ERROR: genres invalid; cannot be empty"),
-    POST_NOTES__USERID_MISSING("5.400.6", "VALIDATION ERROR: userId missing"),
-    POST_NOTES__USERID_NONEXISTING("5.400.7", "VALIDATION ERROR: userId non-existing; user with id {} does not exist"),
+    POST_NOTES__USER_ID_MISSING("5.400.6", "VALIDATION ERROR: userId missing"),
+    POST_NOTES__USER_ID_NONEXISTING("5.400.7", "VALIDATION ERROR: userId non-existing; user with id {} does not exist"),
 
     PUT_NOTES__URL_ID_NONEXISTING("6.400.1", "VALIDATION ERROR: note with id {} does not exist"),
     PUT_NOTES__ID_MISSING("6.400.2", "VALIDATION ERROR: id missing"),
