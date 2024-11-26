@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: demo-springboot-rest-hibernate-mysql
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/demo-springboot-rest-hibernate-mysql'
+    username: root
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # none/validate/update/create-drop
+    show-sql: false
