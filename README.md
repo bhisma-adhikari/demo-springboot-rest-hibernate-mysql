@@ -1,5 +1,7 @@
 # demo-springboot-rest-hibernate-mysql
 
+- Summary:
+    - This project is a back-end app for "note-management tool".
 - Features:
     - This is a simple project to illustrate creating REST APIs using springboot, hibernate, and mysql.
     - Exposes relevant APIs for `User` and `Note` resources. Refer to [APIs](#apis) section for details.
@@ -50,10 +52,11 @@ login_credential <---one-to-one ---> user <--- one-to-many ---> note <--- many-t
 
 # Getting Started:
 
-1. Make sure mysql server is up and running on port 3306.
-2. Create an "empty" database `demo-springboot-rest-hibernate-mysql`.
-3. Update database details in `application-yml`, if needed.
-4. Run the project.
+1. Clone the project.
+3. Make sure mysql server is up and running on port 3306.
+4. Create an "empty" database `demo-springboot-rest-hibernate-mysql`.
+5. Update database details in `application-yml`, if needed.
+6. Run the project.
 
 # Known Bugs:
 
