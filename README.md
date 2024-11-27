@@ -52,3 +52,4 @@ login_credential <---one-to-one ---> user <--- one-to-many ---> note <--- many-t
 3. Run the project
 
 # Known Bugs:
+
