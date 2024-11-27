@@ -4,7 +4,7 @@
     - This project is a back-end app for "note-management tool".
 - Features:
     - This is a simple project to illustrate creating REST APIs using springboot, hibernate, and mysql.
-    - Exposes relevant APIs for `User` and `Note` resources. Refer to [APIs](#apis) section for details.
+    - Exposes relevant APIs for `User`, `Note`, and  `Genre` resources. Refer to [APIs](#apis) section for details.
     - Covers CRUD (create, read, update, delete) operations for `User` and `Note` resources. Refer to [APIs](#apis) section for details.
     - Covers all 3 entity-relationships (`one-to-one`, `one-to-many`, `many-to-many`). Refer
       to [Entity-Relationship Model](#entity-relationship-model) section for details.
@@ -38,6 +38,8 @@
 - POST   : /notes 
 - PUT    : /notes/{id}
 - DELETE : /notes/{id} 
+
+- GET    : /genres
 ```
 
 # Database Model

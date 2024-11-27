@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -72,18 +71,6 @@ public class NoteDtoTransformer {
                 .genreEntities(genreEntities)
                 .userEntity(userEntity)
                 .build();
-    }
-
-
-    public Set<NoteEntity> transformToEntities(Set<NoteDto> noteDtos) {
-        if (CollectionUtils.isEmpty(noteDtos)) return new HashSet<>();
-        return noteDtos.stream().map(this::transformToEntity).collect(Collectors.toSet());
-    }
-
-
-    public Set<NoteDto> transformToDtos(Set<NoteEntity> noteEntities) {
-        if (CollectionUtils.isEmpty(noteEntities)) return new HashSet<>();
-        return noteEntities.stream().map(this::transformToDto).collect(Collectors.toSet());
     }
 
 
