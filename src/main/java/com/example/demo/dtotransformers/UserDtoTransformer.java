@@ -98,18 +98,6 @@ public class UserDtoTransformer {
     }
 
 
-    public Set<UserEntity> transformToEntities(Set<UserDto> userDtos) {
-        if (CollectionUtils.isEmpty(userDtos)) return new HashSet<>();
-        return userDtos.stream().map(this::transformToEntity).collect(Collectors.toSet());
-    }
-
-
-    public Set<UserDto> transformToDtos(Set<UserEntity> userEntities) {
-        if (CollectionUtils.isEmpty(userEntities)) return new HashSet<>();
-        return userEntities.stream().map(this::transformToDto).collect(Collectors.toSet());
-    }
-
-
     public List<UserDto> transformToDtos(List<UserEntity> userEntities) {
         if (CollectionUtils.isEmpty(userEntities)) return new ArrayList<>();
         return userEntities.stream().map(this::transformToDto).collect(Collectors.toList());

@@ -35,16 +35,4 @@ public class GenreService {
     }
 
 
-    /**
-     * If the genreEntity already exists in the database,
-     * then same the database entry is updated and returned.
-     * If the genreEntity does not exist in the database yet,
-     * then a new database entry is inserted into the database
-     * and returned.
-     */
-    public GenreEntity addOrUpdate(GenreEntity genreEntity) {
-        return genreRepository.save(genreEntity);
-    }
-
-
 }
