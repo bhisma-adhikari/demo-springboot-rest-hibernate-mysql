@@ -17,14 +17,6 @@ public class AppError {
     }
 
 
-//    public static AppError fromAppErrorCode(AppErrorCode appErrorCode) {
-//        if (appErrorCode == null) {
-//            throw new IllegalArgumentException("Invalid argument appErrorCode: null");
-//        }
-//        return new AppError(appErrorCode.getCode(), appErrorCode.getDescription());
-//    }
-
-
     public static AppError fromAppErrorCode(AppErrorCode appErrorCode, Object... arguments) {
         if (appErrorCode == null) {
             throw new IllegalArgumentException("Invalid argument appErrorCode: null");
