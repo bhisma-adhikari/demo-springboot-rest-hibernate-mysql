@@ -53,10 +53,9 @@ login_credential <---one-to-one ---> user <--- one-to-many ---> note <--- many-t
 # Getting Started:
 
 1. Clone the project.
-3. Make sure mysql server is up and running on port 3306.
-4. Create an "empty" database `demo-springboot-rest-hibernate-mysql`.
-5. Update database details in `application-yml`, if needed.
-6. Run the project.
+2. Make sure mysql server is up and running on port 3306.
+3. Update mysql username, password in `application-yml`, if needed.
+4. Run the project.
 
 # Known Bugs:
 
